@@ -1,11 +1,2 @@
 creds
 qr_codes/
-cloudflare/workers-autoconfig
-
-# wrangler files
-.wrangler
-.dev.vars*
-!.dev.vars.example
-.env*
-!.env.example
-main
