@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import "tailwindcss";
+@source "../../index.html";
+
+@theme {
+  --font-inter: "Inter", sans-serif;
+  --color-cream: #faf6f0;
+  --color-charcoal: #2e2f2f;
+  --color-sandy: #c08552;
+  --color-creamier: #f5ebe1;
+  --spacing: 1px;
+}
+
+@layer components {
+    .active_lang_button {
+        @apply border border-charcoal bg-sandy drop-shadow-lg rounded-full w-72 h-30 flex flex-row space-x-10 justify-center items-center
+    }
+
+    .inactive_lang_button {
+        @apply border border-charcoal drop-shadow-lg rounded-full w-72 h-30 flex flex-row space-x-10 justify-center items-center
+    }
+}
+
+

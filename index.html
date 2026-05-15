@@ -1,11 +1,48 @@
 <!DOCTYPE html>
 
 <html>
+    <head>
+        <title>Stamatis dough & coffee</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Stamatis dough & coffee is a bakery located at Plakias, Greece. It offers fresh and handmade dough products and amazing coffee.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<body>
-	<hr>
-	<h1> Hello, this website is work in progress!</h1>
-	<h2> everything is subject to change.</h2>
-	<hr>
-</body>
+        <link href="src/css/output.css" rel="stylesheet">
+        <script src="src/scripts/translations.js" defer></script>
+        <script src="src/scripts/events.js" defer></script>
+    </head>
+
+    <body class="bg-cream flex flex-col font-inter items-center space-y-20 mt-35">
+
+        <!-- Language selection and LOGO -->
+        <div class="flex flex-col items-center">
+            <img src="assets/Logo.svg" alt="Logo of Stamatis bakery" class="w-250 h-200">
+            <img src="assets/icons/globe.svg" alt="globe" class="w-27 mt-15 mb-7">
+            <div class="flex flex-row justify-center space-x-15">
+                <button class="active_lang_button" data-lang="en">
+                    <h1 class="text-charcoal text-[13px]">ENG</h1>
+                    <img src="assets/icons/ukflag.svg" alt="uk-flag" class="w-20 h-15 rounded-sm">
+                </button>
+                <button class="inactive_lang_button" data-lang="gr">
+                    <h1 class="text-charcoal text-[13px] mr-15">GR</h1>
+                    <img src="assets/icons/greek_flag.svg" alt="greek_flag" class="w-25 h-20">
+                </button>
+                <button class="inactive_lang_button" data-lang="de">
+                    <h1 class="text-charcoal text-[13px] mr-15">DE</h1>
+                    <img src="assets/icons/german_flag.svg" alt="german_flag" class="w-20 h-15 rounded-sm">
+                </button>
+            </div>
+        </div>
+
+        <!-- Welcome text -->
+        <div class="bg-creamier rounded-md drop-shadow-lg w-368 h-369 flex flex-col">
+            <h1 class="text-sandy text-[20px] font-semibold mt-13 ml-6" data-i18n="welcome_tagline">From our hands, to yours.</h1>
+            <div class="flex flex-col space-y-20 mt-10">
+                <p class="text-charcoal text-[12px] text-wrap ml-6" data-i18n="flavours_and_thoughts">
+                   There are flavors that take you back to home - to the aroma of freshly baked dough, to a first sip of coffee that puts the day in its place.
+                </p>
+            </div>
+        </div>
+
+    </body>
 </html>
