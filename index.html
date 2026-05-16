@@ -16,7 +16,9 @@
 
         <!-- Language selection and LOGO -->
         <div class="flex flex-col items-center">
-            <img src="assets/Logo.svg" alt="Logo of Stamatis bakery" class="w-250 h-200">
+            <a href="index.html">
+                <img src="assets/Logo.svg" alt="Logo of Stamatis bakery" class="w-250 h-200">
+            </a>
             <img src="assets/icons/globe.svg" alt="globe" class="w-27 mt-15 mb-7">
             <div class="flex flex-row justify-center space-x-15">
                 <button class="active_lang_button" data-lang="en">
@@ -47,16 +49,18 @@
                 <p class="charcoal_12" data-i18n="handmade">
                     Because... handmade has a name and a taste that stands out.
                 </p>
-                <p class="charcoal_12" datadata-i18n="where_does_it_start">
+                <p class="charcoal_12" data-i18n="where_does_it_start">
                    At Stamatis dough & coffee everything starts from our hands.
                 </p>
                 <p class="charcoal_12" data-i18n="promise">
                     From morning to night, with every order, our promise remains the same: handmade, fresh, with passion.
                 </p>
             </div>
-            <button class="w-150 h-39 border border-charcoal bg-sandy rounded-full self-center">
-                <h1 class="text-charcoal text-[20px]" data-i18n="check_the_menu">See the menu</h1>
-            </button>
+            <a href="menu.html" class="self-center">
+                <button class="w-150 h-39 border-2 border-charcoal bg-cream rounded-full active:bg-sandy">
+                    <h1 class="text-charcoal text-[20px]" data-i18n="check_the_menu">See the menu</h1>
+                </button>
+            </a>
         </div>
 
         <!-- Orders and delivery -->
@@ -90,12 +94,14 @@
                     Open daily
                 </h1>
             </div>
-            <h1 class="text-charcoal text-[20px] fontfont-semibold tracking-wide ml-6" data-i18n="dates_open">
-                Monday - Sunday
-            </h1>
-            <h1 class="text-charcoal text-[15px] fontfont-semibold tracking-wide ml-6">
-                6:00 - 18:00
-            </h1>
+            <div class="flex flex-col space-y-5">
+                <h1 class="text-charcoal text-[20px] fontfont-semibold tracking-wide ml-6" data-i18n="dates_open">
+                    Monday - Sunday
+                </h1>
+                <h1 class="text-charcoal text-[15px] fontfont-semibold tracking-wide ml-6">
+                    6:00 - 18:00
+                </h1>
+            </div>
             <div class="flex flex-row ml-6 space-x-5 mt-4">
                <img src="assets/icons/location.svg" alt="location_icon" class="w-20 h-20 mt-5">
                <h1 class="text-sandy text-[20px] font-semibold tracking-wide ml-6" data-i18n="location__">
@@ -122,12 +128,12 @@
             </h1>
             <div class="flex flex-row ml-6 space-x-10">
                 <a href="https://search.google.com/local/writereview?placeid=ChIJE2yUjdFvmxQRlLGgTBRHt8c" >
-                    <button class="border border-sandy rounded-full w-50 h-50 flex flex-col items-center justify-center">
+                    <button class="border border-charcoal bg-cream rounded-full w-50 h-50 flex flex-col items-center justify-center active:bg-sandy">
                         <img src="assets/icons/icons8-google-30.svg" alt="google logo" class="w-30 h-30">
                     </button>
                 </a>
                 <a href="https://www.tripadvisor.com/Restaurant_Review-g319776-d24050591-Reviews-Stamatis_Handmade_Dough_coffee-Plakias_Agios_Vasileios_Municipality_Rethymnon_Pr.html">
-                    <button class="border border-sandy rounded-full w-50 h-50 flex flex-col items-center justify-center">
+                    <button class="border border-charcoal bg-cream rounded-full w-50 h-50 flex flex-col items-center justify-center active:bg-sandy">
                         <img src="assets/icons/tripAdvisor.svg" alt="tripAdvisor logo" class="w-30 h-30">
                     </button>
                 </a>
@@ -136,7 +142,7 @@
                 Follow us on:
             </h1>
             <a href="https://www.instagram.com/stamatis.doughandcoffee/">
-                <button class="border border-sandy rounded-full w-50 h-50 flex flex-col items-center justify-center ml-6">
+                <button class="border border-charcoal bg-cream rounded-full w-50 h-50 flex flex-col items-center justify-center ml-6 active:bg-sandy">
                     <img src="assets/icons/instagram-1-svgrepo-com.svg" alt="instagram logo" class="w-30 h-30">
                 </button>
             </a>

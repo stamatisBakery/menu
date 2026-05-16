@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Menu - Stamatis dough & coffee</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Browse the full menu of Stamatis dough & coffee. Fresh handmade dough products and amazing coffee in Plakias, Greece.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="src/css/output.css" rel="stylesheet">
+        <script src="src/scripts/translations.js" defer></script>
+        <script src="src/scripts/events.js" defer></script>
+    </head>
+
+    <body class="bg-cream flex flex-col font-inter items-center space-y-20 mt-35">
+
+        <!-- Language selection and LOGO -->
+        <div class="flex flex-col items-center">
+            <a href="index.html">
+                <img src="assets/Logo.svg" alt="Logo of Stamatis bakery" class="w-250 h-200">
+            </a>
+            <img src="assets/icons/globe.svg" alt="globe" class="w-27 mt-15 mb-7">
+            <div class="flex flex-row justify-center space-x-15">
+                <button class="active_lang_button" data-lang="en">
+                    <h1 class="text-charcoal text-[13px]">ENG</h1>
+                    <img src="assets/icons/ukflag.svg" alt="uk-flag" class="w-20 h-15 rounded-sm">
+                </button>
+                <button class="inactive_lang_button" data-lang="gr">
+                    <h1 class="text-charcoal text-[13px] mr-15">GR</h1>
+                    <img src="assets/icons/greek_flag.svg" alt="greek_flag" class="w-25 h-20">
+                </button>
+                <button class="inactive_lang_button" data-lang="de">
+                    <h1 class="text-charcoal text-[13px] mr-15">DE</h1>
+                    <img src="assets/icons/german_flag.svg" alt="german_flag" class="w-20 h-15 rounded-sm">
+                </button>
+            </div>
+        </div>
+
+        <p data-i18n="check_the_menu">Check the menu</p>
+
+    </body>
