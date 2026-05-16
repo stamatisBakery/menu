@@ -15,6 +15,8 @@ const translations = {
         open_dai: "Open daily",
         dates_open: "Monday - Sunday",
         location__: "Location",
+        experience: "Share your experience:",
+        follow_us: "Follow us on:",
     },
     gr: {
         welcome_tagline: "Από τα χέρια μας, στα χέρια σας.",
@@ -32,6 +34,8 @@ const translations = {
         open_dai: "Ανοιχτά καθημερινά",
         dates_open: "Δευτέρα - Κυριακή",
         location__: "Τοποθεσία",
+        experience: "Μοιραστείτε την εμπειρία σας:",
+        follow_us: "Ακολουθήστε μας στο:",
     },
     de: {
         welcome_tagline: "Von unseren Händen in deine.",
@@ -49,5 +53,7 @@ const translations = {
         open_dai: "Täglich geöffnet",
         dates_open: "Montag - Sonntag",
         location__: "Standort",
+        experience: "Teilen Sie Ihre Erfahrungen:",
+        follow_us: "Folgen Sie uns auf:",
     },
 };
