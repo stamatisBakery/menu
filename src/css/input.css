@@ -30,7 +30,50 @@
     }
 
     .info_container {
-        @apply bg-creamier rounded-md drop-shadow-lg w-348 pb-10 flex flex-col space-y-13
+        @apply bg-creamier rounded-md drop-shadow-lg w-348 pb-10 flex flex-col space-y-13;
     }
 
+    .nav_bar_text {
+        @apply text-charcoal text-[12px] text-wrap tracking-wide;
+    }
+
+    .active_nav_item {
+        @apply border border-charcoal bg-sandy rounded-sm pl-10 pr-10 shrink-0
+    }
+
+    .inactive_nav_item {
+        @apply border border-charcoal rounded-sm pl-10 pr-10 shrink-0
+    }
+
+    .list_item {
+        @apply flex flex-row w-full justify-between gap-x-4
+    }
+
+    .item_name {
+        @apply text-charcoal font-semibold text-[15px] tracking-wide text-wrap
+    }
+
+    .item_price {
+       @apply text-sandy font-medium text-[15px] tracking-wide shrink-0 whitespace-nowrap
+    }
+
+    .list_line {
+        @apply border-sandy w-full
+    }
+
+    .menu_header {
+        @apply flex flex-row self-start space-x-10 ml-20
+    }
+
+    .header_text {
+        @apply text-charcoal text-[20px] font-semibold tracking-wide
+    }
+
+    .header_icon {
+        @apply w-20 h-20 mt-4
+    }
+
+    .list{
+        @apply flex flex-col space-y-15 w-full px-20
+    }
 }
