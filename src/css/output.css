@@ -177,6 +177,9 @@
   .sticky {
     position: sticky;
   }
+  .top-0 {
+    top: calc(var(--spacing) * 0);
+  }
   .top-30 {
     top: calc(var(--spacing) * 30);
   }
@@ -362,6 +365,15 @@
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
   }
+  .pt-30 {
+    padding-top: calc(var(--spacing) * 30);
+  }
+  .pt-47 {
+    padding-top: calc(var(--spacing) * 47);
+  }
+  .pt-\[max\(30px\,env\(safe-area-inset-top\)\)\] {
+    padding-top: max(30px, env(safe-area-inset-top));
+  }
   .pb-2 {
     padding-bottom: calc(var(--spacing) * 2);
   }
@@ -420,6 +432,11 @@
   .drop-shadow-2xl {
     --tw-drop-shadow-size: drop-shadow(0 25px 25px var(--tw-drop-shadow-color, rgb(0 0 0 / 0.15)));
     --tw-drop-shadow: drop-shadow(var(--drop-shadow-2xl));
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  }
+  .drop-shadow-lg {
+    --tw-drop-shadow-size: drop-shadow(0 4px 4px var(--tw-drop-shadow-color, rgb(0 0 0 / 0.15)));
+    --tw-drop-shadow: drop-shadow(var(--drop-shadow-lg));
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
   .filter {
