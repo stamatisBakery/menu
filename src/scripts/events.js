@@ -44,6 +44,74 @@ document.addEventListener("DOMContentLoaded", function() {
         const lang = localStorage.getItem("selectedLang") || "en";
         applyLanguage(lang);
     });
+
+    // --- ScrollSpy & Horizontal Nav Auto-Scroll ---
+        const navList = document.querySelector("nav ul");
+        const navItems = document.querySelectorAll("nav ul li");
+        const menuHeaders = document.querySelectorAll(".menu_header");
+
+        let currentActiveId = "coffee"; // Default starting category
+
+        window.addEventListener("scroll", () => {
+            let newActiveId = currentActiveId;
+            const scrollPos = window.scrollY;
+
+            // Determine which section is currently at the top of the viewport
+            menuHeaders.forEach(header => {
+                // Trigger threshold: accounts for sticky nav height + top margin (~120px)
+                if (header.id && scrollPos >= (header.offsetTop - 120)) {
+                    newActiveId = header.id;
+                }
+            });
+
+            // If the active section has changed, update the UI
+            if (newActiveId !== currentActiveId) {
+                currentActiveId = newActiveId;
+
+                navItems.forEach(item => {
+                    const anchor = item.querySelector("a");
+                    if (anchor && anchor.getAttribute("data-target") === currentActiveId) {
+
+                        // Set to Active
+                        item.classList.remove("inactive_nav_item");
+                        item.classList.add("active_nav_item");
+
+                        // Smoothly center this item in the horizontal scrollbar
+                        const scrollLeftPos = item.offsetLeft - (navList.offsetWidth / 2) + (item.offsetWidth / 2);
+                        navList.scrollTo({
+                            left: scrollLeftPos,
+                            behavior: "smooth"
+                        });
+                    } else {
+
+                        // Set to Inactive
+                        item.classList.remove("active_nav_item");
+                        item.classList.add("inactive_nav_item");
+                    }
+                });
+            }
+        });
+
+        // Optional Bonus: Allow clicking the nav items to scroll instantly to that category
+        navItems.forEach(item => {
+            const anchor = item.querySelector("a");
+            if (anchor) {
+                item.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    const targetId = anchor.getAttribute("data-target");
+                    const targetSection = document.getElementById(targetId);
+
+                    if (targetSection) {
+                        // Scroll down to the category, offsetting for the sticky navbar height
+                        const offsetTop = targetSection.offsetTop - 100;
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            }
+        });
 });
 
 

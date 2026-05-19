@@ -174,6 +174,15 @@
   }
 }
 @layer utilities {
+  .sticky {
+    position: sticky;
+  }
+  .top-\[30px\] {
+    top: 30px;
+  }
+  .z-50 {
+    z-index: 50;
+  }
   .mt-3 {
     margin-top: calc(var(--spacing) * 3);
   }
@@ -204,11 +213,17 @@
   .flex {
     display: flex;
   }
+  .table {
+    display: table;
+  }
   .h-15 {
     height: calc(var(--spacing) * 15);
   }
   .h-20 {
     height: calc(var(--spacing) * 20);
+  }
+  .h-25 {
+    height: calc(var(--spacing) * 25);
   }
   .h-30 {
     height: calc(var(--spacing) * 30);
@@ -248,6 +263,24 @@
   }
   .max-w-\[100vw\] {
     max-width: 100vw;
+  }
+  .flex-shrink {
+    flex-shrink: 1;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  .resize {
+    resize: both;
+  }
+  .\[scrollbar-width\:none\] {
+    scrollbar-width: none;
+  }
+  .scrollbar-none {
+    scrollbar-width: none;
   }
   .flex-col {
     flex-direction: column;
@@ -379,14 +412,49 @@
   .italic {
     font-style: italic;
   }
-  .drop-shadow-2xl {
-    --tw-drop-shadow-size: drop-shadow(0 25px 25px var(--tw-drop-shadow-color, rgb(0 0 0 / 0.15)));
-    --tw-drop-shadow: drop-shadow(var(--drop-shadow-2xl));
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
+  .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  }
+  .\[-ms-overflow-style\:none\] {
+    -ms-overflow-style: none;
   }
   .active\:bg-sandy {
     &:active {
       background-color: var(--color-sandy);
+    }
+  }
+  .max-md\:\[scrollbar-width\:none\] {
+    @media (width < 48rem) {
+      scrollbar-width: none;
+    }
+  }
+  .max-md\:scrollbar-none {
+    @media (width < 48rem) {
+      scrollbar-width: none;
+    }
+  }
+  .max-md\:\[-ms-overflow-style\:none\] {
+    @media (width < 48rem) {
+      -ms-overflow-style: none;
+    }
+  }
+  .\[\&\:\:-webkit-scrollbar\]\:hidden {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .max-md\:\[\&\:\:-webkit-scrollbar\]\:hidden {
+    @media (width < 48rem) {
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
   }
 }
@@ -579,6 +647,11 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-blur {
   syntax: "*";
   inherits: false;
@@ -640,6 +713,7 @@
       --tw-border-style: solid;
       --tw-font-weight: initial;
       --tw-tracking: initial;
+      --tw-outline-style: solid;
       --tw-blur: initial;
       --tw-brightness: initial;
       --tw-contrast: initial;

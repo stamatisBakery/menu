@@ -38,90 +38,90 @@
         </div>
 
         <!-- Navigation bar -->
-        <div class="flex flex-col space-y-7 bg-cream w-full max-w-[100vw]">
+        <div class="flex flex-col space-y-7 bg-cream w-full max-w-[100vw] sticky top-[30px] z-50">
             <nav>
-                <ul class="flex flex-row space-x-5 overflow-x-auto whitespace-nowrap px-5 pb-2">
+                <ul class="flex flex-row space-x-5 overflow-x-auto whitespace-nowrap px-5 pb-2 max-md:[&::-webkit-scrollbar]:hidden max-md:[-ms-overflow-style:none] max-md:scrollbar-none">
                     <li class="active_nav_item">
-                        <a>
+                        <a data-target="coffee" class="cursor-pointer">
                             <h1 class="nav_bar_text" data-i18n="coffee_nav"> COFFEE </h1>
                         </a>
                     </li>
 
                     <li class="inactive_nav_item">
-                        <a>
+                        <a data-target="beverages" class="cursor-pointer">
                             <h1 class="nav_bar_text" data-i18n="beverages_nav"> BEVERAGES </h1>
                         </a>
                     </li>
 
                     <li class="inactive_nav_item">
-                        <a>
+                        <a data-target="soft_drinks" class="cursor-pointer">
                             <h1 class="nav_bar_text" data-i18n="soft_drinks_nav"> SOFT DRINKS </h1>
                         </a>
                     </li>
 
                     <li class="inactive_nav_item">
-                        <a>
+                        <a data-target="smoothies" class="cursor-pointer">
                             <h1 class="nav_bar_text"> SMOOTHIES & MILKSHAKES </h1>
                         </a>
                     </li>
 
                     <li class="inactive_nav_item">
-                        <a>
+                        <a data-target="beer" class="cursor-pointer">
                             <h1 class="nav_bar_text" data-i18n="beer_nav"> BEERS </h1>
                         </a>
                     </li>
 
                     <li class="inactive_nav_item">
-                        <a>
+                        <a data-target="cocktails" class="cursor-pointer">
                             <h1 class="nav_bar_text" data-i18n="cocktails_nav"> COCKTAILS </h1>
                         </a>
                     </li>
 
 
                     <li class="inactive_nav_item">
-                        <a>
+                        <a data-target="pastry" class="cursor-pointer">
                             <h1 class="nav_bar_text" data-i18n="handmade_past_nav"> HANDMADE PASTRIES </h1>
                         </a>
                     </li>
 
                     <li class="inactive_nav_item">
-                        <a>
+                        <a data-target="toast" class="cursor-pointer">
                             <h1 class="nav_bar_text" data-i18n="toast_san_nav"> TOAST - SANDWICHES </h1>
                         </a>
                     </li>
 
                     <li class="inactive_nav_item">
-                        <a>
+                        <a data-target="club" class="cursor-pointer">
                             <h1 class="nav_bar_text" data-i18n="club_burger_nav"> CLUB SANDWICHES - BURGERS </h1>
                         </a>
                     </li>
 
                     <li class="inactive_nav_item">
-                        <a>
+                        <a data-target="brunch" class="cursor-pointer">
                             <h1 class="nav_bar_text" data-i18n="brunch_nav"> BRUNCH </h1>
                         </a>
                     </li>
 
                     <li class="inactive_nav_item">
-                        <a>
+                        <a data-target="yogurt" class="cursor-pointer">
                             <h1 class="nav_bar_text" data-i18n="yogurt_bowls_nav"> YOGURT BOWLS </h1>
                         </a>
                     </li>
 
                     <li class="inactive_nav_item">
-                        <a>
+                        <a data-target="salads" class="cursor-pointer">
                             <h1 class="nav_bar_text" data-i18n="salads_nav"> SALADS </h1>
                         </a>
                     </li>
 
                     <li class="inactive_nav_item">
-                        <a>
+                        <a data-target="desserts" class="cursor-pointer">
                             <h1 class="nav_bar_text" data-i18n="desserts_nav"> DESSERTS </h1>
                         </a>
                     </li>
 
                     <li class="inactive_nav_item">
-                        <a>
+                        <a data-target="crepes" class="cursor-pointer">
                             <h1 class="nav_bar_text" data-i18n="crepes_waffles_nav"> CREPES - WAFFLES </h1>
                         </a>
                     </li>
@@ -132,7 +132,7 @@
         </div>
 
         <!-- The menu -->
-        <div class="menu_header">
+        <div class="menu_header" id="coffee">
             <img src="assets/icons/coffee.svg" alt="coffee icon" class="header_icon">
             <h1 class="header_text" data-i18n="coffee_nav"> COFFEE </h1>
         </div>
@@ -229,8 +229,8 @@
             <li><hr class="list_line"></li>
         </ul>
 
-        <div class="menu_header">
-            <img src="assets/icons/beverage.svg" alt="beverage icon" class="header_icon">
+        <div class="menu_header" id="beverages">
+            <img src="assets/icons/beverages.svg" alt="beverage icon" class="header_icon">
             <h1 class="header_text" data-i18n="beverages_nav"> BEVERAGES </h1>
         </div>
 
@@ -284,8 +284,8 @@
             <li><hr class="list_line"></li>
         </ul>
 
-        <div class="menu_header">
-            <img src="assets/icons/soft_drink.svg" alt="soft drink icon" class="header_icon">
+        <div class="menu_header" id="soft_drinks">
+            <img src="assets/icons/soda.svg" alt="soft drink icon" class="header_icon">
             <h1 class="header_text" data-i18n="soft_drinks_nav"> SOFT DRINKS </h1>
         </div>
 
@@ -417,8 +417,8 @@
             <li><hr class="list_line"></li>
         </ul>
 
-        <div class="menu_header">
-            <img src="assets/icons/smoothie.svg" alt="smoothie icon" class="header_icon">
+        <div class="menu_header" id="smoothies">
+            <img src="assets/icons/milkshake.svg" alt="smoothie icon" class="header_icon">
             <h1 class="header_text" data-i18n="smoothies_nav"> SMOOTHIES & MILKSHAKES </h1>
         </div>
 
@@ -508,7 +508,7 @@
             <li><hr class="list_line"></li>
         </ul>
 
-        <div class="menu_header">
+        <div class="menu_header" id="beer">
             <img src="assets/icons/beer.svg" alt="beer icon" class="header_icon">
             <h1 class="header_text" data-i18n="beer_nav"> BEERS </h1>
         </div>
@@ -533,7 +533,7 @@
             <li><hr class="list_line"></li>
         </ul>
 
-        <div class="menu_header">
+        <div class="menu_header" id="cocktails">
             <img src="assets/icons/cocktail.svg" alt="cocktail icon" class="header_icon">
             <h1 class="header_text" data-i18n="cocktails_nav"> COCKTAILS </h1>
         </div>
@@ -582,7 +582,7 @@
             <li><hr class="list_line"></li>
         </ul>
 
-        <div class="menu_header">
+        <div class="menu_header" id="pastry">
             <img src="assets/icons/pastry.svg" alt="pastry icon" class="header_icon">
             <h1 class="header_text" data-i18n="handmade_past_nav"> HANDMADE PASTRIES </h1>
         </div>
@@ -715,8 +715,8 @@
             <li><hr class="list_line"></li>
         </ul>
 
-        <div class="menu_header">
-            <img src="assets/icons/sandwich.svg" alt="sandwich icon" class="header_icon">
+        <div class="menu_header" id="toast">
+            <img src="assets/icons/toast.svg" alt="toast icon" class="header_icon">
             <h1 class="header_text" data-i18n="toast_san_nav"> TOAST - SANDWICHES </h1>
         </div>
 
@@ -806,7 +806,7 @@
             <li><hr class="list_line"></li>
         </ul>
 
-        <div class="menu_header">
+        <div class="menu_header" id="club">
             <img src="assets/icons/burger.svg" alt="burger icon" class="header_icon">
             <h1 class="header_text" data-i18n="club_burger_nav"> CLUB SANDWICHES - BURGERS </h1>
         </div>
@@ -849,7 +849,7 @@
             <li><hr class="list_line"></li>
         </ul>
 
-        <div class="menu_header">
+        <div class="menu_header" id="brunch">
             <img src="assets/icons/brunch.svg" alt="brunch icon" class="header_icon">
             <h1 class="header_text" data-i18n="brunch_nav"> BRUNCH </h1>
         </div>
@@ -910,7 +910,7 @@
             <li><hr class="list_line"></li>
         </ul>
 
-        <div class="menu_header">
+        <div class="menu_header" id="yogurt">
             <img src="assets/icons/yogurt.svg" alt="yogurt icon" class="header_icon">
             <h1 class="header_text" data-i18n="yogurt_bowls_nav"> YOGURT BOWLS </h1>
         </div>
@@ -953,7 +953,7 @@
             <li><hr class="list_line"></li>
         </ul>
 
-        <div class="menu_header">
+        <div class="menu_header" id="salads">
             <img src="assets/icons/salad.svg" alt="salad icon" class="header_icon">
             <h1 class="header_text" data-i18n="salads_nav"> SALADS </h1>
         </div>
@@ -996,7 +996,7 @@
             <li><hr class="list_line"></li>
         </ul>
 
-        <div class="menu_header">
+        <div class="menu_header" id="desserts">
             <img src="assets/icons/dessert.svg" alt="dessert icon" class="header_icon">
             <h1 class="header_text" data-i18n="desserts_nav"> DESSERTS </h1>
         </div>
@@ -1075,8 +1075,8 @@
             <li><hr class="list_line"></li>
         </ul>
 
-        <div class="menu_header">
-            <img src="assets/icons/crepe.svg" alt="crepe icon" class="header_icon">
+        <div class="menu_header" id="crepes">
+            <img src="assets/icons/waffle.svg" alt="waffle icon" class="header_icon">
             <h1 class="header_text" data-i18n="crepes_waffles_nav"> CREPES - WAFFLES </h1>
         </div>
 
