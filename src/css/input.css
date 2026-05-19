@@ -34,7 +34,7 @@
     }
 
     .nav_bar_text {
-        @apply text-charcoal text-[12px] text-wrap tracking-wide;
+        @apply text-charcoal text-[15px] text-wrap tracking-wide;
     }
 
     .active_nav_item {

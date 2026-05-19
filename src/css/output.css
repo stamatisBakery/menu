@@ -177,8 +177,8 @@
   .sticky {
     position: sticky;
   }
-  .top-\[30px\] {
-    top: 30px;
+  .top-30 {
+    top: calc(var(--spacing) * 30);
   }
   .z-50 {
     z-index: 50;
@@ -221,9 +221,6 @@
   }
   .h-20 {
     height: calc(var(--spacing) * 20);
-  }
-  .h-25 {
-    height: calc(var(--spacing) * 25);
   }
   .h-30 {
     height: calc(var(--spacing) * 30);
@@ -275,12 +272,6 @@
   }
   .resize {
     resize: both;
-  }
-  .\[scrollbar-width\:none\] {
-    scrollbar-width: none;
-  }
-  .scrollbar-none {
-    scrollbar-width: none;
   }
   .flex-col {
     flex-direction: column;
@@ -359,6 +350,9 @@
   .border-charcoal {
     border-color: var(--color-charcoal);
   }
+  .bg-charcoal {
+    background-color: var(--color-charcoal);
+  }
   .bg-cream {
     background-color: var(--color-cream);
   }
@@ -419,20 +413,17 @@
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
   }
-  .filter {
+  .drop-shadow-2xl {
+    --tw-drop-shadow-size: drop-shadow(0 25px 25px var(--tw-drop-shadow-color, rgb(0 0 0 / 0.15)));
+    --tw-drop-shadow: drop-shadow(var(--drop-shadow-2xl));
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
-  .\[-ms-overflow-style\:none\] {
-    -ms-overflow-style: none;
+  .filter {
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
   .active\:bg-sandy {
     &:active {
       background-color: var(--color-sandy);
-    }
-  }
-  .max-md\:\[scrollbar-width\:none\] {
-    @media (width < 48rem) {
-      scrollbar-width: none;
     }
   }
   .max-md\:scrollbar-none {
@@ -443,11 +434,6 @@
   .max-md\:\[-ms-overflow-style\:none\] {
     @media (width < 48rem) {
       -ms-overflow-style: none;
-    }
-  }
-  .\[\&\:\:-webkit-scrollbar\]\:hidden {
-    &::-webkit-scrollbar {
-      display: none;
     }
   }
   .max-md\:\[\&\:\:-webkit-scrollbar\]\:hidden {
@@ -533,7 +519,7 @@
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
   .nav_bar_text {
-    font-size: 12px;
+    font-size: 15px;
     --tw-tracking: var(--tracking-wide);
     letter-spacing: var(--tracking-wide);
     text-wrap: wrap;
