@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
+@import 'tailwind-animations';
 @source "../../index.html";
 @source "../../menu.html";
 
@@ -24,6 +25,12 @@
     .charcoal_12 {
         @apply text-charcoal text-[12px] text-wrap ml-6 tracking-wide;
     }
+
+
+    .charcoal_13 {
+        @apply text-charcoal text-[12px] text-wrap ml-6 tracking-wide;
+    }
+
 
     .charcoal_15 {
         @apply  text-charcoal text-[15px] text-wrap ml-6 tracking-wide;
@@ -62,7 +69,7 @@
     }
 
     .menu_header {
-        @apply flex flex-row self-start space-x-10 ml-20
+        @apply flex flex-row self-start space-x-10 ml-20 animate-fade-in-up animate-delay-300
     }
 
     .header_text {
@@ -74,6 +81,6 @@
     }
 
     .list{
-        @apply flex flex-col space-y-15 w-full px-20
+        @apply flex flex-col space-y-15 w-full px-20 animate-fade-in-up animate-delay-400
     }
 }

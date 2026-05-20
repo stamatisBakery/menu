@@ -32,6 +32,21 @@ document.addEventListener("DOMContentLoaded", function () {
       const lang = button.getAttribute("data-lang");
       localStorage.setItem("selectedLang", lang);
       applyLanguage(lang);
+
+      const animatedElements = document.querySelectorAll(
+        '.list, .menu_header, .info_container, [class*="animate-"]',
+      );
+
+      animatedElements.forEach(function (el) {
+        // Temporarily disable the animation
+        el.style.animation = "none";
+
+        // Force a browser reflow to register the change
+        void el.offsetHeight;
+
+        // Clear the inline style so the CSS animation applies again
+        el.style.animation = "";
+      });
     });
   });
 
